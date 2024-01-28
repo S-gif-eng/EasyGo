@@ -1,7 +1,12 @@
 @charset "UTF-8";
+*{
+  padding: 0;
+  margin: 0;
+}
 body {
   background-color: #63D6E0;
 }
+
 nav {
   float: right;
 }
@@ -9,6 +14,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  
 }
 nav ul li {
   float: left;
@@ -18,7 +24,7 @@ nav ul li a {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  background: #ffffff;
+  //background: #ffffff;
   color: #463f3f;
   text-decoration: none;
  
@@ -52,7 +58,7 @@ nav ul li ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  background: #fff;
+ // background: #fff;
   height: 70px;
   width: 70px;
 }
@@ -132,7 +138,7 @@ nav ul li ul li a {
 */
 .navigation {
   height: 70px;
-  background: #ffffff;
+  background: #e4fa8b;
 }
 
 /*

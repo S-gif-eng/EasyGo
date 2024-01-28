@@ -2,7 +2,7 @@
 <section class="navigation">
     <div class="nav-container">
       <div class="brand">
-        <a href="#!">LOGO</a>
+        <a routerLink="/home">LOGO</a>
       </div>
       <nav>
         <div class="nav-mobile">
@@ -10,9 +10,9 @@
         </div>
         <ul class="nav-list">
           <!-- Setting the links to #! will ensure that no action takes place on click. -->
-          <li><a href="#!">Home</a></li>
-          <li><a href="#!">About</a></li>
-          <li><a href="#!">Services</a>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a>Services</a>
             <ul class="nav-dropdown">
               <li><a href="#!">Web Design</a></li>
               <li><a href="#!">Web Development</a></li>
@@ -20,7 +20,7 @@
             </ul>
           </li>
           <li><a href="#!">Pricing</a></li>
-          <li><a href="#!">Contact</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
         </ul>
       </nav>
     </div>
