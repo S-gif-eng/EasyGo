@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+// home.component.ts
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
-
+export class HomeComponent implements OnInit, OnDestroy {
   currentSlide = 0;
   totalSlides = 3;
-
-  constructor() {}
+  intervalId: any;
 
   ngOnInit(): void {
     this.startAutoChange();
@@ -21,13 +20,13 @@ export class HomeComponent implements OnInit {
   }
 
   startAutoChange(): void {
-    setInterval(() => {
+    this.intervalId = setInterval(() => {
       this.nextSlide();
     }, 3000); // Change slide every 3 seconds (adjust as needed)
   }
 
   stopAutoChange(): void {
-    // Stop the automatic slide change (clear the interval)
+    clearInterval(this.intervalId);
   }
 
   nextSlide(): void {

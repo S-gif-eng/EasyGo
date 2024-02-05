@@ -1,13 +1,12 @@
+<!-- home.component.html -->
 <div class="carousel-container">
-    <div class="slide" *ngFor="let index of [0, 1, 2]">
-      <!-- Your slide content goes here -->
-      <img *ngIf="currentSlide === index" [src]="'assets/Home/sl'+(index+1)+'.jpg'" alt="Slide {{ index + 1 }}">
-      dat :{{currentSlide}}
-    </div>
-    <!-- <img src="assets/Home/sl1.jpg" alt="image not found"> -->
-    <div class="controls">
-      <button (click)="prevSlide()">Previous</button>
-      <button (click)="nextSlide()">Next</button>
-    </div>
+  <div class="slide" *ngFor="let index of [0, 1, 2]" [class.active]="currentSlide === index">
+    <!-- Your slide content goes here -->
+    <img [src]="'assets/Home/sl' + (index + 1) + '.jpg'" alt="Slide {{ index + 1 }}">
+    dat: {{ currentSlide }}
   </div>
-  
+  <div class="controls">
+    <button (click)="prevSlide()">Previous</button>
+    <button (click)="nextSlide()">Next</button>
+  </div>
+</div>
